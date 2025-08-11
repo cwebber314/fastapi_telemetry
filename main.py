@@ -8,6 +8,7 @@ To run with telemetry:
     opentelemetry-instrument fastapi dev main.py
 
 """
+from fastapi import HTTPException
 import fastapi
 from opentelemetry import trace
 import time
@@ -20,6 +21,12 @@ tracer = trace.get_tracer("sandbox.fastapi")
 @app.get("/foobar")
 async def foobar():
     return {"message": "foo bar"}
+
+
+@tracer.start_as_current_span("fastapi.throw-something")
+@app.get("/throw-something")
+async def throw_something():
+    raise HTTPException("Ooops")
 
 
 @tracer.start_as_current_span("fastapi.hello")

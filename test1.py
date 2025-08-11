@@ -10,6 +10,12 @@ import random
 
 tracer = trace.get_tracer("sandbox.fastapi")
 
+@tracer.start_as_current_span("test1.throw-something")
+def throw_something():
+    raise Exception("Ooops")
+    return {"message": "foo bar"}
+
+
 @tracer.start_as_current_span("test1.foobar")
 def foobar():
     return {"message": "foo bar"}
@@ -17,6 +23,7 @@ def foobar():
 
 @tracer.start_as_current_span("test1.hello")
 def hello():
+    print("hello print to STDOUT")
     return {"message": "hello world"}
 
 
@@ -32,6 +39,7 @@ def long1():
 
     return {"message": "long1"}
 
+throw_something()
 long1()
 long1()
 foobar()
