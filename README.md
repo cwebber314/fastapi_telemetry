@@ -22,6 +22,7 @@ This was amazing - probably python centric but there looks to be APIs for other 
 Pros:
 - Traces Works out of the box with FastAPI
 - SQLAlchemy adapter is amazing
+- custom spans are easy - play really nice with automatic instrumentation
 
 Cons:
 - Can only sign in with public github/google identity unless you do something expensive

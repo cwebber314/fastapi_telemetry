@@ -63,4 +63,15 @@ async def hello():
 
     return {"message": "long1"}
 
+@app.get("/long2")
+async def hello():
+    with logfire.span('Step 1'):
+        rsec = random.random() * 4
+        time.sleep(rsec)
+    with logfire.span('Step 2'):
+        rsec = random.random() * 2
+        time.sleep(rsec)
+
+    return {"message": "long2"}
+
 logfire.instrument_fastapi(app, capture_headers=False)
