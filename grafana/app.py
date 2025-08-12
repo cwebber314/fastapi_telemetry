@@ -1,3 +1,14 @@
+"""
+See:
+
+https://grafana.com/blog/2024/02/20/how-to-instrument-your-python-application-using-opentelemetry/
+
+To start:
+
+flask run -p 8080
+http://localhost:8080/rolldice
+
+"""
 from random import randint
 from flask import Flask, request
 import logging
