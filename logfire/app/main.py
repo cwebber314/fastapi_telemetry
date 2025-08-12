@@ -50,6 +50,7 @@ async def throw_something():
 
 @app.get("/hello")
 async def hello():
+    logfire.set_attribute("user.username", "John Clark")
     print("hello print to STDOUT")
     return {"message": "hello world"}
 
