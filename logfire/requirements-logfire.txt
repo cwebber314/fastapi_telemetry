@@ -7,6 +7,7 @@ click==8.2.1
 colorama==0.4.6
 dnspython==2.7.0
 email_validator==2.2.0
+executing==2.2.0
 fastapi==0.116.1
 fastapi-cli==0.0.8
 fastapi-cloud-cli==0.1.5
@@ -19,6 +20,7 @@ httpx==0.28.1
 idna==3.10
 importlib_metadata==8.7.0
 Jinja2==3.1.6
+logfire==4.2.0
 markdown-it-py==4.0.0
 MarkupSafe==3.0.2
 mdurl==0.1.2
@@ -32,10 +34,13 @@ opentelemetry-instrumentation==0.57b0
 opentelemetry-instrumentation-asgi==0.57b0
 opentelemetry-instrumentation-asyncio==0.57b0
 opentelemetry-instrumentation-dbapi==0.57b0
+opentelemetry-instrumentation-fastapi==0.57b0
 opentelemetry-instrumentation-grpc==0.57b0
 opentelemetry-instrumentation-logging==0.57b0
 opentelemetry-instrumentation-requests==0.57b0
+opentelemetry-instrumentation-sqlalchemy==0.57b0
 opentelemetry-instrumentation-sqlite3==0.57b0
+opentelemetry-instrumentation-system-metrics==0.57b0
 opentelemetry-instrumentation-threading==0.57b0
 opentelemetry-instrumentation-urllib==0.57b0
 opentelemetry-instrumentation-urllib3==0.57b0
@@ -46,6 +51,7 @@ opentelemetry-semantic-conventions==0.57b0
 opentelemetry-util-http==0.57b0
 packaging==25.0
 protobuf==6.31.1
+psutil==7.0.0
 pydantic==2.11.7
 pydantic_core==2.33.2
 Pygments==2.19.2

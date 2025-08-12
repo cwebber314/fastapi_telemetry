@@ -1,0 +1,5 @@
+# Logfire
+
+```
+LOGFIRE_TOKEN=YOUR_TOKEN
+```

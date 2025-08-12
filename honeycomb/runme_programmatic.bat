@@ -1,0 +1,1 @@
+opentelemetry-instrument --traces_exporter console,otlp --metrics_exporter console --service_name prog fastapi run server_programmatic.py
